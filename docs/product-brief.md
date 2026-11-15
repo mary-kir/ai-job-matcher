@@ -51,8 +51,15 @@ A single-user web app with:
 4. Relevance assessment: explain fit, gaps and unknowns against the CV and
    preferences. Use explicit filters plus bounded AI analysis; avoid presenting
    a relevance score as an objective hiring prediction.
-5. Job tracking: save vacancies, mark rejected or applied, add short notes,
-   and detect duplicates using source URL and basic vacancy details.
+5. Job tracking: toggle Saved independently; saved vacancies always show Applied
+   or Not Applied. Marking Applied is permanent and keeps any Saved label;
+   applied vacancies can be saved/unsaved but cannot be rejected. Rejecting an
+   unapplied vacancy clears Saved and hides it from Active, Saved and Applied.
+   Rejected vacancies allow only restoration to Active, without restoring labels.
+   Dashboard Saved/Applied counts exclude rejected vacancies. Prepare canonical
+   vacancy IDs, source-listing references and application-date fields for later
+   duplicate detection; do not implement duplicate detection in the prototype.
+   Short notes remain part of the broader MVP plan.
 6. Privacy and cost controls: support deletion of CV and vacancy data, limit
    description length, cache analysis and cap AI usage.
 
